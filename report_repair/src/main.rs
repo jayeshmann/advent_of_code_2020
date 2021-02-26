@@ -12,13 +12,14 @@ fn main() {
 
     for i in &values {
         for j in &values {
-            if (i + j) == 2020 {
-                fs::write(format!("{}.out", file_name), format!("{}", i * j)).unwrap_or_else(
-                    |err| {
-                        eprintln!("Problem writing file: {}", err);
-                        process::exit(1);
-                    },
-                );
+            for k in &values {
+                if (i + j + k) == 2020 {
+                    fs::write(format!("{}.out", file_name), format!("{}", i * j * k))
+                        .unwrap_or_else(|err| {
+                            eprintln!("Problem writing file: {}", err);
+                            process::exit(1);
+                        });
+                }
             }
         }
     }
