@@ -2,8 +2,9 @@
 
 Advent of Code 2020 Solutions
 
-`Language used: Rust`
+`Languages: Rust & Kotlin`
 
 ## Solution List
 
 - Report Repair
+- Password Philosophy
